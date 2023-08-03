@@ -1,0 +1,95 @@
+{
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf": {
+    "file": "assets/fa-brands-400-2ef6fdde.ttf",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2": {
+    "file": "assets/fa-brands-400-f4617423.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf": {
+    "file": "assets/fa-regular-400-12dea17b.ttf",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2": {
+    "file": "assets/fa-regular-400-7ba24c41.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf": {
+    "file": "assets/fa-solid-900-67a880b4.ttf",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2": {
+    "file": "assets/fa-solid-900-e2c5cf54.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.ttf": {
+    "file": "assets/fa-v4compatibility-8d9500e8.ttf",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.ttf"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2": {
+    "file": "assets/fa-v4compatibility-7c377405.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
+  },
+  "node_modules/primereact/resources/images/color.png": {
+    "file": "assets/color-473bc8ca.png",
+    "src": "node_modules/primereact/resources/images/color.png"
+  },
+  "node_modules/primereact/resources/images/hue.png": {
+    "file": "assets/hue-024cc884.png",
+    "src": "node_modules/primereact/resources/images/hue.png"
+  },
+  "public/images/SVG/logo_blanco.svg": {
+    "file": "assets/logo_blanco-5ca3180e.svg",
+    "src": "public/images/SVG/logo_blanco.svg"
+  },
+  "public/images/SVG/muñeco.svg": {
+    "file": "assets/muñeco-4bbd6c26.svg",
+    "src": "public/images/SVG/muñeco.svg"
+  },
+  "public/images/SVG/turrisystem_azul.svg": {
+    "file": "assets/turrisystem_azul-b27ce81b.svg",
+    "src": "public/images/SVG/turrisystem_azul.svg"
+  },
+  "public/images/SVG/turrisystem_negro.svg": {
+    "file": "assets/turrisystem_negro-ea7e30be.svg",
+    "src": "public/images/SVG/turrisystem_negro.svg"
+  },
+  "public/images/assets/control.png": {
+    "file": "assets/control-2f4c33bb.png",
+    "src": "public/images/assets/control.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-53e7df63.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-8314e801.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.jsx": {
+    "assets": [
+      "assets/logo_blanco-5ca3180e.svg",
+      "assets/control-2f4c33bb.png",
+      "assets/turrisystem_azul-b27ce81b.svg",
+      "assets/muñeco-4bbd6c26.svg",
+      "assets/fa-brands-400-f4617423.woff2",
+      "assets/fa-brands-400-2ef6fdde.ttf",
+      "assets/fa-regular-400-7ba24c41.woff2",
+      "assets/fa-regular-400-12dea17b.ttf",
+      "assets/fa-solid-900-e2c5cf54.woff2",
+      "assets/fa-solid-900-67a880b4.ttf",
+      "assets/fa-v4compatibility-7c377405.woff2",
+      "assets/fa-v4compatibility-8d9500e8.ttf",
+      "assets/color-473bc8ca.png",
+      "assets/hue-024cc884.png"
+    ],
+    "css": [
+      "assets/app-8314e801.css"
+    ],
+    "file": "assets/app-ca0d8c67.js",
+    "isEntry": true,
+    "src": "resources/js/app.jsx"
+  }
+}
