@@ -1,25 +1,24 @@
-APP_NAME=Sime_centralizado
+APP_NAME=Postres
 APP_ENV=local
 APP_KEY=base64:ZDzziPemHRlrLCvYfqZ3zGt9bCRUSW9RcLwQgXPdJas=
 APP_DEBUG=true
+APP_URL=http://localhost
 
 LOG_CHANNEL=stack
 
 DB_CONNECTION=pgsql
 DB_HOST=localhost
-DB_HOST=127.0.0.1
 DB_PORT=5432
 DB_USERNAME=postgres
 DB_PASSWORD=qwerty
-DB_NAME_DINAMICO=centralizado_nuevo
-DB_NAME_CENTRALIZADO=centralizado_nuevo
+DB_NAME_CENTRALIZADO=centralizado_postres
 DB_CHARSET=utf8
 DB_CHARSET=utf8
 DB_COLLATION=utf8_general_ci
 DB_STRICT=false
 URL_PRODUCCION=http://127.0.0.1:8000/
 DB_SCHEMA=centralizado
-DB_SCHEMA_DIN=
+DB_SCHEMA_DIN=postres
 
 BROADCAST_DRIVER=log
 CACHE_DRIVER=file
