@@ -1,10 +1,8 @@
-import { forwardRef, useEffect, useRef } from 'react';
+import { forwardRef, useEffect, useRef, useState } from 'react';
 import {InputText} from "primereact/inputtext";
 
-export default forwardRef(function TextInput(
-    { type = 'text', name, id, value, className, autoComplete, required, isFocused, handleChange, placeholder,error,errors = [] },
-    ref
-) {
+
+export default ({ type,value,placeholder,error,ref,isFocused, name, className, errors = [], ...props }) => {
     const input = ref ? ref : useRef();
 
     useEffect(() => {
@@ -12,22 +10,20 @@ export default forwardRef(function TextInput(
             input.current.focus();
         }
     }, []);
-
     return (
+
         <div className="flex flex-col items-start">
-            <InputText
-                type={type}
-                name={name}
-                id={id}
-                value={value}
-                className={className + (error?' p-invalid':'')}
-                ref={input}
-                autoComplete={autoComplete}
-                required={required}
-                onChange={(e) => handleChange(e)}
-                placeholder={placeholder}
-            />
-             {errors && <div className="text-xs text-red-500 form-error mb-2">{errors}</div>}
-        </div>
-    );
-});
+        <input
+         type={type}
+          id={name}
+          name={name}
+          value={value}
+          ref={input}
+          placeholder={placeholder}
+          {...props}
+          className={`h-11 w-full border-gray-300 focus:border-[#E1B869] focus:ring-[#E1B869] rounded-md shadow-sm text-black border px-4 form-input ${errors.length ? 'error' : ''}` + (error?' p-invalid':'')}
+        />
+        {errors && <div className="text-xs text-red-400">{errors}</div>}
+      </div>
+  );
+};

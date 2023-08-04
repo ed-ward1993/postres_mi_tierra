@@ -1,7 +1,9 @@
 import React, {useEffect, useState, useRef} from "react";
 import {usePage, useForm, Link, Head} from "@inertiajs/react";
-import Pagination from "@/Components/Pagination";
+import Pagination from "@/components/Pagination";
 import Swal from "sweetalert2";
+import Icon from '@/components/Icon';
+
 
 export default function Index ({ auth }) {
     const { menus, queryMenus, page } = usePage().props;
@@ -20,11 +22,11 @@ export default function Index ({ auth }) {
             showCancelButton: true,
             focusConfirm: false,
             confirmButtonText:
-                '<i class="fa-solid fa-check"></i> Aceptar',
-            confirmButtonColor: '#22c55e',
+                '<i className="fa-solid fa-check"></i> Aceptar',
+            confirmButtonColor: '#026882',
             confirmButtonAriaLabel: (data.status === '0'?'in':'')+'activa el men&uacute;',
             cancelButtonText:
-                '<i class="fa-solid fa-times"></i> Cancelar',
+                '<i className="fa-solid fa-times"></i> Cancelar',
             cancelButtonAriaLabel: 'Cancela la '+(data.status === 0?'in':'')+'activaci&oacute;n del men&uacute;'
 
         }).then((result) => {
@@ -60,7 +62,7 @@ export default function Index ({ auth }) {
                     <div className="flex flex-row-reverse">
                         {/*{auth.permissions.includes('menus.create') && (*/}
                             <Link
-                                className="px-6 py-2 text-white bg-green-500 rounded-md focus:outline-none"
+                                className="btn_principal"
                                 href={route("menus.create")}
                                 preserveScroll={true}
                                 preserveState={true}
@@ -72,40 +74,53 @@ export default function Index ({ auth }) {
                 </div>
             </div>
             <div className="overflow-x-auto bg-white rounded shadow">
-                <table className="w-full whitespace-nowrap">
-                    <thead className="text-white bg-gray-600">
-                    <tr className="font-bold text-left">
-                        <th className="px-6 pt-5 pb-4">#</th>
-                        <th className="px-6 pt-5 pb-4">Titulo</th>
-                        <th className="px-6 pt-5 pb-4">URL/Ruta</th>
-                        <th className="px-6 pt-5 pb-4">Padre</th>
-                        <th className="px-6 pt-5 pb-4 text-center">Acciones</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+
+                    <table className="w-full border text-center text-base font-semibold table-auto whitespace-nowrap">
+                                <thead className="border-t font-medium border-2 border-grey-900">
+                                    <tr className="font-bold text-left bg-gray-100">
+                                        <th scope="col" className="border-r px-6 pt-5 pb-4">
+                                            #
+                                        </th>
+                                        <th scope="col" className="border-r px-6 pt-5 pb-4">
+                                        Titulo
+                                        </th>
+                                        <th scope="col" className="border-r px-6 pt-5 pb-4">
+                                        URL/Ruta
+                                        </th>
+                                        <th scope="col" className="border-r px-6 pt-5 pb-4">
+                                        Padre
+                                        </th>
+                                        <th scope="col" className="border-r px-6 pt-5 pb-4">
+                                            Acciones
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody className='text-left'>
                     {menus.data.map(({ id, title, uri, type, status, parent }) => (
-                        <tr key={id} className="">
-                            <td className="border-t p-2">
+                        <tr key={id} className="hover:bg-gray-50 focus-within:bg-gray-100">
+                            <td className="px-6 py-4 font-medium border-r  text-blue-900 whitespace-nowrap ">
                                 {id}
                             </td>
-                            <td className="border-t p-2">
+                            <td className="whitespace-nowrap border-r px-6 py-4">
                                 {title}
                             </td>
-                            <td className="border-t p-2">
+                            <td className="whitespace-nowrap border-r px-6 py-4">
                                 {uri}
                             </td>
-                            <td className="border-t p-2">
+                            <td className="whitespace-nowrap border-r px-6 py-4">
                                 {parent?parent.title:''}
                             </td>
-                            <td className="border-t text-center p-2">
+                            <td className="whitespace-nowrap border-r px-3 py-2 space-x-2 centrar">
                                 {/*{auth.permissions.includes('menus.edit') && (*/}
                                     <Link
                                         type="button"
                                         tabIndex="1"
-                                        className="px-4 py-2 text-sm text-white bg-blue-500 rounded"
+                                        className="p-1 text-sm text-white bg-[#026882] hover:bg-[#003442] rounded"
                                         href={route("menus.edit", id)}
                                     >
-                                        <i className="fa-solid fa-pen"></i>
+                                           <div className='w-6 h-6  '>
+                                            <Icon className="w-6 h-6 text-white fill-current group-hover:text-gray-300 focus:text-gray-600 " name="edit" />
+                                            </div>
                                     </Link>
                                 {/*)}*/}
                                 &nbsp;&nbsp;
@@ -113,14 +128,19 @@ export default function Index ({ auth }) {
                                     <button
                                         title={(status>0?"in":"")+"activar Menú"}
                                         type="button"
-                                        className={"px-4 py-2 text-sm text-white bg-"+(status>0?"red":"green")+"-500 rounded"}
+                                        className={"p-1 text-sm text-white bg-"+(status>0?"red":"green")+"-500 rounded"}
                                         onClick={(e)=> {setData("status", status > 0?'0':'1');deleteMenu(id,status);}}
                                     >
                                         {status === 0 && (
-                                            <i className="fa-solid fa-check-circle"></i>
+                                            <div className='w-6 h-6'>
+                                            <Icon className="w-6 h-6 text-white fill-current group-hover:text-gray-300 focus:text-gray-600" name="comprobado" />
+                                            </div>
                                         )}
                                         {status > 0 && (
-                                            <i className="fa-solid fa-times-circle"></i>
+
+                                              <div className='w-6 h-6  '>
+                                              <Icon className="w-6 h-6 text-white fill-current group-hover:text-gray-300 focus:text-gray-600 " name="trash" />
+                                              </div>
                                         )}
                                     </button>
                                 {/*)}*/}
@@ -139,7 +159,7 @@ export default function Index ({ auth }) {
                     )}
                     </tbody>
                 </table>
-                <Pagination class="mt-6" links={menus.links} />
+                <Pagination className="mt-6" links={menus.links} />
             </div>
         </>
     );

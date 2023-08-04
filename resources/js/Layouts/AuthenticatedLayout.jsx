@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import Navbar from '../Components/Navbar/Navbar';
-import SimNet from '../../../public/images/SVG/turrisystem_negro.svg';
+import SimNet from '@/public/images/SVG/logo_cafe.svg';
 import Dropdown from '@/Components/Dropdown';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
-import LogoBlanco from '../../../public/images/SVG/logo_blanco.svg';
+import LogoBlanco from '@/public/images/SVG/logo_blanco.svg';
 import TopHeader from '../Components/Navbar/TopHeader';
 import Sidebar from '../Components/Navbar/Sidebar';
 import NavPrin from '../Components/Navbar/NavPrin';

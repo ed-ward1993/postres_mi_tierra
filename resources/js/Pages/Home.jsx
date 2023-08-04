@@ -26,13 +26,13 @@ const Home = () => {
         <div className="flex flex-col h-full">
             <div className="flex-1">
                 <div className="max-w-full mx-auto sm:px-6 lg:px-8">
-                    <div className="h-10 overflow-hidden shadow-sm sm:rounded-lg border-2 border-[#dfefff] mb-5  ">
-                        <div className="px-5 pt-1 text-[#048FC2]">Postres de mi tierra</div>
+                    <div className="h-10 overflow-hidden shadow-sm sm:rounded-lg border-2 border-[#E1B869] mb-5  ">
+                        <div className="px-5 pt-1 text-[#ce9936]">Postres de mi tierra</div>
                     </div>
                 </div>
                 {(rolesActual === 'Agendador' || rolesActual === 'Administrador') && (
                 <div className='w-full centrar mb-4'>
-                    <div className='text-[#003066] text-2xl font-bold'>
+                    <div className='text-[#301505] text-2xl font-bold'>
                         Notificaciones
                     </div>
                 </div>

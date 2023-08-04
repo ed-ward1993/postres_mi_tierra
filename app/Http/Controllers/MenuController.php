@@ -14,6 +14,16 @@ use Inertia\Inertia;
 class MenuController extends Controller
 {
 
+    function __construct()
+    {
+
+        $this->middleware('permission:view_parametrizar_menus')->only(['index']);
+        $this->middleware('permission:add_parametrizar_menus')->only(['create','store']);
+        $this->middleware('permission:edit_parametrizar_menus')->only(['edit','update']);
+        $this->middleware('permission:delete_parametrizar_menus')->only('destroy');
+
+    }
+
     /**
      * Display a listing of the resource.
      *

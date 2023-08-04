@@ -1,14 +1,12 @@
 import { useState,useEffect } from "react";
-import Control from '../../../../public/images/assets/control.png'
-import SimNet from '../../../../public/images/SVG/turrisystem_azul.svg'
-import { Link } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 import classNames from 'classnames'
 import Icon from '@/Components/Icon';
 
 const Sidebar = ({ parent }) => {
     let [menus,setMenus] = useState([]);
-
     const [open, setOpen] = useState(true);
+    const {ziggy} = usePage().props;
 
     useEffect(() => {
         setMenuItems();
@@ -25,9 +23,9 @@ const Sidebar = ({ parent }) => {
     }
 
     return (
-        <div className={` ${open ? "w-56 max-2xl:w-56 max-lg:w-48 max-sm:w-32" : "w-20 max-sm:w-14 "}  flex flex-col bg-[#F1FCFF] duration-300 rounded-sm shadow-md`}>
+        <div className={` ${open ? "w-56 max-2xl:w-56 max-lg:w-48 max-sm:w-32" : "w-20 max-sm:w-14 "}  flex flex-col bg-[#EEE4C9] duration-300 rounded-sm shadow-md`}>
             <div className={` ${open ? "w-56 max-2xl:w-56 max-lg:w-48 max-sm:w-32" : "w-20 max-sm:w-14 "}  h-full  p-5  pt-8 relative duration-300 rounded-sm shadow-md`}>
-                <img src={Control} className={`absolute cursor-pointer -right-3 top-9 w-7 border-[#008bbf] border-2 rounded-full  ${!open && "rotate-180"}`}
+                <img src={ziggy.url+"/images/assets/control.png"} className={`absolute cursor-pointer -right-3 top-9 w-7 border-[#E1B869] border-2 rounded-full  ${!open && "rotate-180"}`}
                     onClick={() => setOpen(!open)} />
                 <div className="centrar gap-x-4 items-center w-full mb-1">
                     {/* <img
@@ -69,7 +67,7 @@ const Sidebar = ({ parent }) => {
 
             </div>
             <footer className="centrar max-w-full h-12 bottom-0 border-t-2 border-gray-50">
-                <img src={SimNet} className="object-contain w-32" />
+                <img src={ziggy.url+"/images/SVG/logo_cafe.svg"} className="object-contain w-16" />
             </footer>
         </div>
     );

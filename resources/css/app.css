@@ -3,6 +3,12 @@
 @tailwind utilities;
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
 
+
+
+.btn_principal {
+    @apply drop-shadow-lg rounded-lg border-t-2 transition-opacity duration-500 ease-in-out bg-[#BA6030] hover:bg-[#843c1a] focus:bg-[#843c1a]/95 focus:outline-none hover:opacity-90 transform hover:-translate-y-1 px-3 py-2 text-white text-base font-semibold;
+  }
+
 .color_principal{
     @apply bg-[#01356A]
 }
@@ -11,7 +17,7 @@
     @apply bg-gradient-to-t from-[#002F65] to-[#008BBF]
 }
 .fondo_color_right{
-    @apply bg-gradient-to-r from-[#002F65] to-[#008BBF]
+    @apply bg-gradient-to-r from-[#56340E] to-[#B4814F]
 }
 
 .centrar{

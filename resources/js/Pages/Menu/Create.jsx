@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Head, Link, useForm} from "@inertiajs/react";
-import DynamicSelect from "@/Components/DynamicSelect";
-import DynamicTreeSelect from "@/Components/DynamicTreeSelect";
+import DynamicSelect from "@/components/DynamicSelect";
+import DynamicTreeSelect from "@/components/DynamicTreeSelect";
 
 
 export default function Create ({ auth }) {
@@ -709,13 +709,13 @@ export default function Create ({ auth }) {
                             <div className="mt-4 flex justify-between">
                                 <button
                                     type="submit"
-                                    className="px-6 py-2 font-bold text-white bg-green-500 rounded"
+                                    className="px-6 py-2 font-bold text-white bg-[#843c1a] rounded"
                                 >
                                     Guardar
                                 </button>
                                 <Link
                                     href={route("menus.index")}
-                                    className="px-4 py-2 text-white bg-red-500 rounded"
+                                    className="px-4 py-2 text-white bg-[#d13a1f] rounded"
                                 >
                                     Atrás
                                 </Link>

@@ -130,7 +130,7 @@ export default function Login({ status, canResetPassword }) {
                 {/* logo turrisystem */}
                 <div className='centrar w-full h-6 mt-3'>
                     <div className='absolute bottom-1 max-md:bottom-2 max-2xl:bottom-6'>
-                        <img src="images/SVG/logo_azul.svg" alt="" className='object-cover h-8 max-2xl:h-6'/>
+                        <img src="images/SVG/logo_cafe.svg" alt="" className='object-cover h-12 max-2xl:h-10'/>
                     </div>
                 </div>
             </div>

@@ -18,6 +18,8 @@ use App\Http\Middleware\ChangeDb;
 use App\Http\Middleware\CheckSesion;
 use App\Http\Middleware\JwtMiddleware;
 use App\Http\Middleware\ValidateSesion;
+use App\Http\Controllers\UsuarioController;
+
 use Inertia\Inertia;
 
 Route::get('/user', [UserController::class, 'index']);
@@ -63,44 +65,30 @@ Route::middleware('auth')->group(function () {
         Route::get('/main',[MainController::class, 'index'])->name('main');
         Route::get('/main/roles',[MainController::class, 'RolActual'])->name('main.rol');
 
-        Route::get('/rol', [RolController::class,'index']);
-        Route::post('/rol/create', [RolController::class,'store']);
-        Route::put('/rol/update', [RolController::class,'update']);
-        Route::put('/rol/inactivar', [RolController::class,'inactivar']);
-        Route::put('/rol/activar', [RolController::class,'activar']);
-        Route::get('/rol/obtenerRolPermisos', [RolController::class,'obtenerRolPermisos']);
-        Route::put('/rol/updatePermisos', [RolController::class,'updatePermisos']);
+        Route::get('/roles', [RolController::class,'index'])->name('roles.index');
+        Route::post('/roles/guardar', [RolController::class,'store'])->name('roles.store');
+        Route::post('/roles/update', [RolController::class,'update'])->name('roles.update');
+        Route::put('/roles/inactivar', [RolController::class,'inactivar'])->name('roles.inactivar');
+        Route::put('/roles/activar', [RolController::class,'activar'])->name('roles.activar');
+        Route::put('/roles/asignarPermisos', [RolController::class,'asignarPermisos'])->name('roles.asignarPermisos');
+        Route::post('/roles/obtenerRolPermisos', [RolController::class,'obtenerRolPermisos'])->name('roles.obtenerRolPermisos');
         Route::get('/rol/getrol', [RolController::class,'getRoles']);
 
-        Route::get('/permission', [PermisosController::class,'index']);
-        Route::post('/permission/create', [PermisosController::class,'store']);
-        Route::put('/permission/update', [PermisosController::class,'update']);
-        Route::put('/permission/cambiarEstado', [PermisosController::class,'cambiarEstado']);
-        Route::get('/permission/obtenerPermisos', [PermisosController::class,'obtenerPermisos']);
+        Route::get('/permisos', [PermisosController::class,'index'])->name('permisos.index');
+        Route::post('/permisos/guardar', [PermisosController::class,'store'])->name('permisos.store');
+        Route::post('/permisos/update', [PermisosController::class,'update'])->name('permisos.update');
+        Route::put('/permisos/inactivar', [PermisosController::class,'inactivar'])->name('permisos.inactivar');
+        Route::put('/permisos/activar', [PermisosController::class,'activar'])->name('permisos.activar');
 
-        Route::get('/usuarios', [UserController::class,'index']);
-        Route::post('/usuarios/create', [UserController::class,'store']);
-        Route::put('/usuarios/update', [UserController::class,'update']);
-        Route::put('/usuarios/inactivar', [UserController::class,'inactivar']);
-        Route::put('/usuarios/activar', [UserController::class,'activar']);
-        Route::get('/tipoDoc/gettipodoc',[UserController::class,'getTipoDoc']);
-        Route::get('/usuarios/usuarioActivo', [UserController::class,'getUsuarioActivo']);
-        Route::put('/usuarios/cambiarcontraseña', [UserController::class,'cambiarContraseña']);
-        Route::get('/usuarios/getDeptoUser/{id}', [UserController::class,'getDeptoUser']);
-        Route::get('/usuarios/getUserCentralizado', [UserController::class,'getUserCentralizado']);
-        Route::post('/usuario/cargarArchivo', [UserController::class,'cargueArchivo']);
-
-        /*Route::get('/menus', [ParametrizarMenusController::class,'index']);
-        Route::post('/menus/create', [ParametrizarMenusController::class,'store']);
-        Route::put('/menus/update', [ParametrizarMenusController::class,'update']);
-        Route::put('/menus/cambiarEstado', [ParametrizarMenusController::class,'cambiarEstado']);
-        Route::get('/menus/consultarMenuPadre', [ParametrizarMenusController::class,'consultarMenuPadre']);
-        Route::get('/menus/consultarPermisosPadre',  [ParametrizarMenusController::class,'consultarPermisosPadre']);
-        Route::get('/menus/getMenus', [ParametrizarMenusController::class,'getMenus']);
-        Route::get('/menus/verificaUltimoHijo',  [ParametrizarMenusController::class,'verificaUltimoHijo']);
-        Route::get('/menus/getRutaRelativa',[ParametrizarMenusController::class,'getRutaRelativa']);
-        Route::get('/menus/getRutasVue',[ParametrizarMenusController::class,'getRutasVue']);
-        Route::get('/menus/getRutasVueMenu',[ParametrizarMenusController::class,'getRutasVueMenu']);*/
+        Route::get('/usuarios', [UsuarioController::class,'index'])->name('usuarios.index');
+        Route::get('/usuarios/clientes', [UsuarioController::class,'indexClientes'])->name('usuarios.indexClientes');
+        Route::get('/usuarios/edit/{user}', [UsuarioController::class,'edit'])->name('usuarios.edit');
+        Route::post('/usuarios/ActualizarPerfil', [UsuarioController::class,'actualizarPerfil'])->name('usuarios.actualizarPerfil');
+        Route::post('/usuarios/sedes', [UsuarioController::class,'sedes'])->name('usuarios.sedes');
+        Route::post('/usuarios/guardar', [UsuarioController::class,'store'])->name('usuarios.store');
+        Route::post('/usuarios/update', [UsuarioController::class,'update'])->name('usuarios.update');
+        Route::put('/usuarios/inactivar', [UsuarioController::class,'inactivar'])->name('usuarios.inactivar');
+        Route::put('/usuarios/activar', [UsuarioController::class,'activar'])->name('usuarios.activar');
 
         Route::get('/postresCentralizado', [PostresCentralizadoController::class,'index']);
         Route::post('/postresCentralizado/create', [PostresCentralizadoController::class,'store']);
