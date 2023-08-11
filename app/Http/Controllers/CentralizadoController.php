@@ -34,11 +34,11 @@ class CentralizadoController extends Controller
 
     public function getDeptos($id){
 
-        $deptos = PostresUsuario::join('postres','postres.id','=','postres_usuario.id_postres')
+        $deptos = PostresUsuario::join('postresConexion','postresConexion.id','=','postres_usuario.id_postres')
                   ->where('postres_usuario.id_usuario',$id)
-                  ->where('postres.estado','1')
-                  ->select('postres.id','postres.url_logo','postres.nombre')
-                  ->orderBy('postres.id','asc')
+                  ->where('postresConexion.estado','1')
+                  ->select('postresConexion.id','postresConexion.url_logo','postresConexion.nombre')
+                  ->orderBy('postresConexion.id','asc')
                   ->get();
 
         session(['postres' => json_decode($deptos)]);
