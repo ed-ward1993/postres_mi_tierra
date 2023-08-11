@@ -48,7 +48,7 @@ class CentralizadoController extends Controller
 
     public function change(Request $request,$userId,$conexion,$token){
 
-        dd($request,$userId,$conexion,$token);
+        // dd($request,$userId,$conexion,$token);
         if(!$this->validateSesion($token,$userId))
         {
             Auth::logout();
@@ -58,7 +58,7 @@ class CentralizadoController extends Controller
 
         Auth::loginUsingId($userId, true);
 
-        $depto = PostresCentralizado::where('id',$conexion)->dd();
+        $depto = PostresCentralizado::where('id',$conexion)->first();
 
         $activeDepto = PostresUsuario::join('usuarios','usuarios.id','=','postres_usuario.id_usuario')
                                         ->where('postres_usuario.id_usuario',Auth::id())
