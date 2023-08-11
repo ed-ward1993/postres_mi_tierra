@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Postres extends Model
 {
+    protected $connection = 'dinamico';
+
     protected $table = 'postres';
 
     protected $fillable = [

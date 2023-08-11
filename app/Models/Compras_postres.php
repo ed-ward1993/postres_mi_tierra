@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Compras_postres extends Model
 {
+    protected $connection = 'dinamico';
+
     protected $table = 'compras_postres';
 
     protected $fillable = [

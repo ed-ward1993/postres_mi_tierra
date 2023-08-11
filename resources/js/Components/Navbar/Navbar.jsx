@@ -44,6 +44,25 @@ const Navbar = () => {
                         Usuarios Clientes
                     </NavLink>
 
+                    {(auth.user.roles[0].name === 'super_administrador' || auth.user.roles[0].name === 'administrador' ) && (
+                            <>
+                        <NavLink
+                            href={route('categorias.index')}
+                            className="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
+                            onClick={() => setMenuConfigOpen(false)}
+                        >
+                            Categorias 
+                        </NavLink>
+                                <NavLink
+                                    href={route('roles.index')}
+                                    className="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
+                                    onClick={() => setMenuConfigOpen(false)}
+                                >
+                                    Postres
+                                </NavLink>                               
+                            </>
+                        )}
+
                         {(auth.user.roles[0].name === 'super_administrador') && (
                             <>
                         <NavLink

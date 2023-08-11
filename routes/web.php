@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\PermisosController;
@@ -79,6 +80,12 @@ Route::middleware('auth')->group(function () {
         Route::post('/permisos/update', [PermisosController::class,'update'])->name('permisos.update');
         Route::put('/permisos/inactivar', [PermisosController::class,'inactivar'])->name('permisos.inactivar');
         Route::put('/permisos/activar', [PermisosController::class,'activar'])->name('permisos.activar');
+
+        Route::get('/categorias', [CategoriaController::class,'index'])->name('categorias.index');
+        Route::post('/categorias/guardar', [CategoriaController::class,'store'])->name('categorias.store');
+        Route::post('/categorias/update', [CategoriaController::class,'update'])->name('categorias.update');
+        Route::put('/categorias/inactivar', [CategoriaController::class,'inactivar'])->name('categorias.inactivar');
+        Route::put('/categorias/activar', [CategoriaController::class,'activar'])->name('categorias.activar');
 
         Route::get('/usuarios', [UsuarioController::class,'index'])->name('usuarios.index');
         Route::get('/usuarios/clientes', [UsuarioController::class,'indexClientes'])->name('usuarios.indexClientes');
