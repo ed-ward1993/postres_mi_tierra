@@ -51,15 +51,15 @@ const Navbar = () => {
                             className="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
                             onClick={() => setMenuConfigOpen(false)}
                         >
-                            Categorias 
+                            Categorias
                         </NavLink>
                                 <NavLink
-                                    href={route('roles.index')}
+                                    href={route('postres.index')}
                                     className="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
                                     onClick={() => setMenuConfigOpen(false)}
                                 >
                                     Postres
-                                </NavLink>                               
+                                </NavLink>
                             </>
                         )}
 
@@ -70,7 +70,7 @@ const Navbar = () => {
                             className="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
                             onClick={() => setMenuConfigOpen(false)}
                         >
-                            Usuarios 
+                            Usuarios
                         </NavLink>
                                 <NavLink
                                     href={route('roles.index')}
@@ -79,14 +79,14 @@ const Navbar = () => {
                                 >
                                     Roles
                                 </NavLink>
-                                
+
                                 <NavLink
                                     href={route('permisos.index')}
                                     className="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
                                     onClick={() => setMenuConfigOpen(false)}
                                 >
                                     Permisos
-                                </NavLink>    
+                                </NavLink>
                                 <NavLink
                                     href={route('menus.index')}
                                     className="block px-6 py-2 hover:bg-indigo-600 hover:text-white"

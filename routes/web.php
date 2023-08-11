@@ -14,6 +14,7 @@ use App\Http\Controllers\PostresCentralizadoController;
 use App\Http\Controllers\ParametrizarRutasVueController;
 use App\Http\Controllers\PasswordResetControllerWeb;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\PostresController;
 use App\Http\Controllers\RouteController;
 use App\Http\Middleware\ChangeDb;
 use App\Http\Middleware\CheckSesion;
@@ -108,6 +109,9 @@ Route::middleware('auth')->group(function () {
         Route::put('/tipoDocumento/update', [TipoDocumentoController::class,'update']);
         Route::put('/tipoDocumento/inactivar', [TipoDocumentoController::class,'inactivar']);
         Route::put('/tipoDocumento/activar', [TipoDocumentoController::class,'activar']);
+
+        Route::get('/postres', [PostresController::class,'index'])->name('postres.index');
+
 
     });
 });
