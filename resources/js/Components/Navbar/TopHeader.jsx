@@ -10,7 +10,7 @@ const TopHeader = () => {
         <div className='bg-[#56340E] md:w-72 lg:w-96 flex justify-between p-1 border-none'>
         <div className="items-center px-6 py-2  md:flex-shrink-0 md:justify-center shadow-lg">
             <Link className='mt-0' href='/main'>
-            <img src={ziggy.url+"/images/SVG/logo_blanco.svg"} className="fill-current w-20" />
+            {/* <img src={ziggy.url+"/images/SVG/logo_blanco.svg"} className="fill-current w-20" /> */}
             </Link>
             
         </div>

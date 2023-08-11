@@ -67,7 +67,7 @@ const Sidebar = ({ parent }) => {
 
             </div>
             <footer className="centrar max-w-full h-12 bottom-0 border-t-2 border-gray-50">
-                <img src={ziggy.url+"/images/SVG/logo_cafe.svg"} className="object-contain w-16" />
+                {/* <img src={ziggy.url+"/images/SVG/logo_cafe.svg"} className="object-contain w-16" /> */}
             </footer>
         </div>
     );
