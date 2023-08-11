@@ -40,6 +40,6 @@ class CreateUsuariosTable extends Migration
      */
     public function down()
     {
-        Schema::connection('centralizado')->dropIfExists('usuarios');
+        // Schema::connection('centralizado')->dropIfExists('usuarios');
     }
 }

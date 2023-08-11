@@ -31,6 +31,6 @@ class CreateFailedJobsTable extends Migration
      */
     public function down()
     {
-        Schema::connection('centralizado')->dropIfExists('failed_jobs');
+        // Schema::connection('centralizado')->dropIfExists('failed_jobs');
     }
 }

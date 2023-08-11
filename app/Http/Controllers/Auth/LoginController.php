@@ -41,10 +41,10 @@ class LoginController extends Controller
     public function login(Request $request){
 
         $this->validateLogin($request);
-
         
         $credentials = $request->only('usuario', 'password');
         $user = User::where('usuario', $request->usuario)->first();
+        
         // dd($user->all());
         if(isset($user)){
             if($user->intentos_login == 10)

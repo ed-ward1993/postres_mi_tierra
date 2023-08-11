@@ -31,6 +31,6 @@ class CreateActivityLogTable extends Migration
      */
     public function down()
     {
-        Schema::connection('centralizado')->dropIfExists('activity_log');
+        // Schema::connection('centralizado')->dropIfExists('activity_log');
     }
 }

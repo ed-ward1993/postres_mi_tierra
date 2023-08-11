@@ -34,6 +34,6 @@ class CreatePostresUsuarioTable extends Migration
      */
     public function down()
     {
-        Schema::connection('centralizado')->dropIfExists('postres_usuario');
+        // Schema::connection('centralizado')->dropIfExists('postres_usuario');
     }
 }

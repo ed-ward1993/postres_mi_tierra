@@ -21,7 +21,7 @@ export default ({ type,value,placeholder,error,ref,isFocused, name, className, e
           ref={input}
           placeholder={placeholder}
           {...props}
-          className={`h-11 w-full border-gray-300 focus:border-[#E1B869] focus:ring-[#E1B869] rounded-md shadow-sm text-black border px-4 form-input ${errors.length ? 'error' : ''}` + (error?' p-invalid':'')}
+          className={`h-11 w-full border-gray-300 focus:border-[#02558A] focus:ring-[#02558A] rounded-md shadow-sm text-black border px-4 form-input ${errors.length ? 'error' : ''}` + (error?' p-invalid':'')}
         />
         {errors && <div className="text-xs text-red-400">{errors}</div>}
       </div>

@@ -29,6 +29,6 @@ class LogUserLoginCTable extends Migration
      */
     public function down()
     {
-        Schema::connection('centralizado')->dropIfExists('log_user_login');
+        // Schema::connection('centralizado')->dropIfExists('log_user_login');
     }
 }

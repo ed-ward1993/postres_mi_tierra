@@ -34,6 +34,6 @@ class CreatePersonasTable extends Migration
      */
     public function down()
     {
-        Schema::connection('centralizado')->dropIfExists('personas');
+        // Schema::connection('centralizado')->dropIfExists('personas');
     }
 }

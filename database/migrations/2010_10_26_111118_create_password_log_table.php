@@ -31,6 +31,6 @@ class CreatePasswordLogTable extends Migration
      */
     public function down()
     {
-        Schema::connection('centralizado')->dropIfExists('password_log');
+        // Schema::connection('centralizado')->dropIfExists('password_log');
     }
 }

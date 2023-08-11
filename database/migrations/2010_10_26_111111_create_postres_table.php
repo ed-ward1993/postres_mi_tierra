@@ -33,6 +33,6 @@ class CreatePostresTable extends Migration
      */
     public function down()
     {
-        Schema::connection('centralizado')->dropIfExists('postres');
+        // Schema::connection('centralizado')->dropIfExists('postres');
     }
 }

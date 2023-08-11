@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTiposDocumentosTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateTiposDocumentosTable extends Migration
      */
     public function up()
     {
-        Schema::connection('centralizado')->create('tipos_documentos', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('nombre');
-            $table->boolean('estado')->default(1);
+        Schema::connection('dinamico')->create('categorias', function (Blueprint $table) {
+            $table->bigIncrements('id_categorias');
+            $table->string('nombre',55);
+            $table->text('descripcion')->nullable();
+            $table->boolean('estado')->default(true);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateTiposDocumentosTable extends Migration
      */
     public function down()
     {
-        // Schema::connection('centralizado')->dropIfExists('tipos_documentos');
+        Schema::connection('dinamico')->dropIfExists('categorias');
     }
-}
+};

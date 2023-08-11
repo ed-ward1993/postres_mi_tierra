@@ -6,7 +6,7 @@ export default function Inicio() {
     const {  auth } = usePage().props
     console.log(auth);
     return (
-        <div className="w-full h-screen centrar flex-col bg-dunes bg-cover bg-left-bottom bg-[url('../../images/SVG/fondo_empresas.svg')]">
+        <div className="w-full h-screen centrar flex-col bg-dunes bg-cover bg-left-bottom bg-[url('../../images/PNG/fondo_empresas.jpeg')]">
             <div className='w-5/6 h-full flex flex-col'>
                 <div className="centrar flex-col w-full h-56 max-2xl:h-24 max-md:mt-3">
                     <div className='centrar flex-col rounded-full w-40 h-40 max-2xl:h-14 max-2xl:w-14 max-lg:mt-4 max-2xl:mt-3 -mt-5'>

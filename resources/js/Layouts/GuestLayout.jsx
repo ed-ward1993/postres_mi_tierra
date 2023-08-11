@@ -8,7 +8,7 @@ export default function Guest({ children }) {
 
                 <div className='max-w-full h-full ml-12 max-lg:hidden'>
                     <div className='h-[90%]'>
-                        <img src="images/SVG/muñeco2.svg" alt="" className='object-contain h-full mt-5' />
+                        <img src="images/PNG/login.jpg" alt="" className='object-contain h-full mt-5' />
                     </div>
                 </div>
 

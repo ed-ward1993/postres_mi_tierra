@@ -70,7 +70,7 @@ export default function Login({ status, canResetPassword }) {
             </div>
             <div className='flex-col w-full h-[90%]'>
                 <div className='centrar '>
-                    <img src="images/SVG/logo.svg" className="hidden max-lg:flex h-28 max-lg:h-16 mt-7 max-lg:mt-4" />
+                    <img src="images/SVG/logo_colores.svg" className="hidden max-lg:flex h-28 max-lg:h-16 mt-7 max-lg:mt-4" />
                 </div>
 
                 <div className='w-full centrar flex-col mt-20 max-lg:mt-5 max-2xl:mt-8 min-2xl:mt-16'>
@@ -91,7 +91,7 @@ export default function Login({ status, canResetPassword }) {
                                 className="mt-1 block w-full"
                                 autoComplete="usuario"
                                 isFocused={true}
-                                handleChange={onHandleChange}
+                                onChange={onHandleChange} 
                                 error={inputErrors.usuario}
                                 placeholder="Escriba su usuario"
                             />
@@ -106,7 +106,7 @@ export default function Login({ status, canResetPassword }) {
                                 value={data.password}
                                 className="mt-1 block w-full"
                                 autoComplete="current-password"
-                                handleChange={onHandleChange}
+                                onChange={onHandleChange} 
                                 error={inputErrors.password}
                                 placeholder="Contraseña"
                             />
