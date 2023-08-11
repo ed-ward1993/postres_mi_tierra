@@ -31,6 +31,8 @@ class PermisosController extends Controller
                                     }
                                 });
 
+                                
+
         return Inertia::render('Permisos/Index', [
             'queryPermisos' => request()->input('queryPermisos'),
             'permisos'  => $permisos->paginate(10)

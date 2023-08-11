@@ -14,7 +14,7 @@ export default function Inicio() {
                         {/* <img src="images/SVG/logo_blanco.svg" className="object-cover w-24 h-24 max-md:w-16" /> */}
                     </div>
                     <div className='centrar w-1/2 h-8 -mt-3 max-md:w-full max-2xl:w-full max-2xl:mt-2 '>
-                        <h1 className='text-3xl max-md:text-base max-2xl:text-lg font-bold text-[#fff]'>Postres de Mi Tierra</h1>
+                        {/* <h1 className='text-3xl max-md:text-base max-2xl:text-lg font-bold text-[#fff]'>Postres de Mi Tierra</h1> */}
                     </div>
                 </div>
                 <div className=' w-full h-4/6'>
