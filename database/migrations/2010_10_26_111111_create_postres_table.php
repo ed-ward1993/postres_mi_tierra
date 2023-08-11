@@ -13,8 +13,8 @@ class CreatePostresTable extends Migration
      */
     public function up()
     {
-        Schema::connection('centralizado')->dropIfExists('postres');
-        Schema::connection('centralizado')->create('postres', function (Blueprint $table) {
+        Schema::connection('centralizado')->dropIfExists('postresConexion');
+        Schema::connection('centralizado')->create('postresConexion', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre',255);
             $table->string('nombre_db',255);

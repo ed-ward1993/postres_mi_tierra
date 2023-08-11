@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Categoria;
+use Illuminate\Support\Facades\DB;
+
 
 class CategoriaSeed extends Seeder
 {
@@ -15,34 +17,40 @@ class CategoriaSeed extends Seeder
      */
     public function run()
     {
-        Categoria::create([
-            'nombre' => '12 Onzas',
-            'descripcion' => 'Deliciosas Frutos Rojos ',
-            'estado' => true,
-        ]);
 
-        Categoria::create([
-            'nombre' => '16 Onzas',
-            'descripcion' => 'Deliciosas Maracuya ',
-            'estado' => true,
-        ]);
-
-        Categoria::create([
-            'nombre' => 'Refractarea pequeña',
-            'descripcion' => 'Deliciosas Limon ',
-            'estado' => true,
-        ]);
-
-        Categoria::create([
-            'nombre' => 'Refractera mediana',
-            'descripcion' => 'Deliciosas Nucita ',
-            'estado' => true,
-        ]);
-
-        Categoria::create([
-            'nombre' => 'Refracterea Grande',
-            'descripcion' => 'Deliciosas limon ',
-            'estado' => true,
-        ]);
+        DB::connection('dinamico')->table('categorias')->insert(
+            [
+                [
+                    'id_categorias' => '1',
+                    'nombre' => '12 Onzas',
+                    'descripcion' => 'Deliciosas Frutos Rojos ',
+                    'estado' => true,
+                ],
+                [
+                    'id_categorias' => '2',
+                    'nombre' => '16 Onzas',
+                    'descripcion' => 'Deliciosas Maracuya ',
+                    'estado' => true,
+                ],
+                [
+                    'id_categorias' => '3',
+                    'nombre' => 'Refractarea pequeña',
+                    'descripcion' => 'Deliciosas Limon ',
+                    'estado' => true,
+                ],
+                [
+                    'id_categorias' => '4',
+                    'nombre' => 'Refractera mediana',
+                    'descripcion' => 'Deliciosas Nucita ',
+                    'estado' => true,
+                ],
+                [
+                    'id_categorias' => '5',
+                    'nombre' => 'Refracterea Grande',
+                    'descripcion' => 'Deliciosas limon ',
+                    'estado' => true,
+                ]
+            ]
+        );
     }
 }

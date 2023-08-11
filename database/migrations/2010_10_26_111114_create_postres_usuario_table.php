@@ -18,7 +18,7 @@ class CreatePostresUsuarioTable extends Migration
             $table->bigIncrements('id');
             // $table->bigInteger('tipo_documento')->unsigned();
             $table->bigInteger('id_postres')->unsigned();
-            $table->foreign('id_postres')->references('id')->on('postres');
+            $table->foreign('id_postres')->references('id')->on('postresConexion');
             $table->bigInteger('id_usuario')->unsigned();
             $table->foreign('id_usuario')->references('id')->on('usuarios');
             $table->boolean('estado')->default(1);

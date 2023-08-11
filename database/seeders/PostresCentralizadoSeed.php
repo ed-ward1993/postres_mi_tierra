@@ -15,7 +15,7 @@ class PostresCentralizadoSeed extends Seeder
      */
     public function run()
     {
-        DB::connection('centralizado')->table('postres')->insert([
+        DB::connection('centralizado')->table('postresConexion')->insert([
         	[
 	        	'id'		     => '1',
 	        	'nombre' 	     => 'Postres de mi tierra',

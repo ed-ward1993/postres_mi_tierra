@@ -13,17 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::connection('dinamico')->create('compras_prostres', function (Blueprint $table) {
+        Schema::connection('dinamico')->create('compras_postres', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('id_compra');
-            $table->unsignedBigInteger('id_prostres');
+            $table->unsignedBigInteger('id_postres');
             $table->integer('cantidad');
             $table->double('total');
             $table->boolean('estado')->default(true);
             $table->timestamps();
     
             $table->foreign('id_compra')->references('id_compra')->on('compras');
-            $table->foreign('id_prostres')->references('id_postres')->on('postres');
+            $table->foreign('id_postres')->references('id_postres')->on('postres');
         });
     }
 
